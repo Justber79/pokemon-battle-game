@@ -5,7 +5,7 @@ const BASE_URL = "https://pokeapi.co";
 
 /**
  * FEATURE: Fetch a list of Pokemon (FR015)
- * Used by: Home Page team
+ * Used by: Home Page
  */
 export async function getPokemonList(limit: number = 20, offset: number = 0) {
   const response = await fetch(`${BASE_URL}/pokemon?limit=${limit}&offset=${offset}`);
