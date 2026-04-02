@@ -1,20 +1,25 @@
 @import "tailwindcss";
+@plugin "daisyui"; /* <--- To aktywuje data-theme="dark" */
 
-body {
-  font-family: "Inter", sans-serif;
+@theme {
+  --color-pokemon-red: #ef4444;
 }
-/* Background wrapper for all pages */
+
 body {
   font-family: "Inter", sans-serif;
   min-height: 100vh;
   margin: 0;
-  position: relative;
+  /* Dodajemy bazowy ciemny kolor, żeby nie było białego błysku */
+  background-color: #020617;
+  color: #f1f5f9;
 }
 
-/* Page content container */
-.page-content {
-  position: relative;
-  z-index: 10;
-  min-height: 100vh;
-  padding: 1rem;
+/* Naprawa Twojej klasy bg-mesh (FR021) */
+.bg-mesh {
+  background-color: #020617;
+  background-image:
+    radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(239, 68, 68, 0.1) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(168, 85, 247, 0.15) 0px, transparent 50%);
+  background-attachment: fixed;
 }
